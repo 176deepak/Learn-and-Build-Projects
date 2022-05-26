@@ -6,7 +6,7 @@ import tkinter.messagebox as mb
 import mysql.connector
 
 # database Connection (Please enter your database credentials)
-mydb = mysql.connector.connect(host="localhost", user="root", password="%Deepak@2002#",
+mydb = mysql.connector.connect(host="*****", user="*****", password="*****",
                                auth_plugin='mysql_native_password')
 cursor = mydb.cursor()
 cursor = mydb.cursor(buffered=True)
