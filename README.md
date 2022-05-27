@@ -4,14 +4,14 @@
 # LnB internship Task 1
 # Create Phone Directory
   Create a phone directory with menu
-  create contact
-  add new contact
-  update contact
-  delete contact
-  show a give name contact
-  show all contact
+    1. create contact
+    2. add new contact
+    3. update contact
+    4. delete contact
+    5. show a give name contact
+    6. show all contact
   
-  # Technology used in this Task - 
+# Technology used in this Task - 
     Language - Python
     GUI - Python tkinter
     Database - MySQL
