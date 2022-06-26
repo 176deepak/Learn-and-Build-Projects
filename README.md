@@ -1,4 +1,4 @@
 # Learn-and-Build-Projects
 LnB internship projects
 
-##Project1-Phone Directory
+*Project1-Phone Directory*
