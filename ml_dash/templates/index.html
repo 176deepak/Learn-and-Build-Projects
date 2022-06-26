@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <h1>Welcome to Prediction World</h1>
+        <div class="row">
+            <div class="column">
+                <img src="{{url_for('static', filename='iris.jpg')}}" width="250" height="300" style="border:5px solid #6A1B4D;width:85%;padding=25px">
+            </div>
+           <div class="column">
+                <img src="{{url_for('static', filename='Breast_cancer.png')}}" width="300" height="300" style="border:5px solid #6A1B4D;width:85%">
+           </div>
+            <div class="column">
+                <img src="{{url_for('static', filename='Student_score.jpg')}}" width="300" height="300" style="border:5px solid #6A1B4D;width:85%">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column" style="padding:50px;padding-left:135px">
+                <a href="{{url_for('iris')}}" class="button" target="_blank">Predict</a>
+            </div>
+            <div class="column" style="padding:50px;padding-left:135px">
+                <a href="{{url_for('cancer')}}" class="button" target="_blank">Predict</a>
+            </div>
+            <div class="column" style="padding:50px;padding-left:135px">
+                <a href="{{url_for('score')}}" class="button" target="_blank">Predict</a>
+            </div>
+        </div>
+
+    </body>
+</html>

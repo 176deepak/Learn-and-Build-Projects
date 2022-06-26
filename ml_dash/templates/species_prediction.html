@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Species Detection</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <h1 class="model">Iris Species Prediction</h1>
+    <div class="container">
+        <form action="" method="post">
+            <div class="row">
+                <div class="col-25">
+                    <label for="sl">Sepal Length</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="sl" name="sl" min="0" max="100" step="any"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="sw">Sepal Width</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="sw" name="sw" min="0" max="100" step="any"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="pl">Petal Length</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="pl" name="pl" min="0" max="100" step="any"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="pw">Petal Width</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="pw" name="pw" min="0" max="100" step="any"><br>
+                </div>
+            </div>
+            <div class="col-50">
+                <button type="submit" class="button">Predict</button>
+            </div>
+        </form>
+        {% if pred %}
+            <h3 style="text-align:center;color:#6A1B4D">Prediction: {{ pred }}</h3>
+        {% else %}
+            <h3 style="text-align:center;color:#6A1B4D">Prediction:</h3>
+        {% endif %}
+    </div>
+</body>
+</html>

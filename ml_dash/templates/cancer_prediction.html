@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breast Cancer Prediction</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <h1 class="model">Breast Cancer Classification</h1>
+    <div class="container">
+        <form action="" method="post">
+            <div class="row">
+                <div class="col-25">
+                    <label for="CT">Clump Thickness</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="CT" name="CT" min="0" max="100" step="any">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="uSize">Uniformity of Cell Size</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="uSize" name="uSize" min="0" max="100" step="any"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="uShape">Uniformity of Cell Shape</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="uShape" name="uShape" min="0" max="100" step="any"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="mA">Marginal Adhesion</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="mA" name="mA" min="0" max="100" step="any"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="SECS">Single Epithelial Cell Size</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="SECS" name="SECS" min="0" max="100" step="any"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="BN">Bare Nuclei</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="BN" name="BN" min="0" max="100" step="any"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="BC">Bland Chromatin</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="BC" name="BC" min="0" max="100" step="any"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="NN">Normal Nucleoli</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="NN" name="NN" min="0" max="100" step="any"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="Mit">Mitoses</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="Mit" name="Mit" min="0" max="100" step="any"><br>
+                </div>
+            </div>
+            <div class="col-50">
+                <button type="submit" class="button">Predict</button>
+            </div>
+        </form>
+
+        {% if pred %}
+            <h3 style="text-align:center;color:#6A1B4D">Prediction: {{ pred }}</h3>
+        {% else %}
+            <h3 style="text-align:center;color:#6A1B4D">Prediction:</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
